@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6B59DEEA-14C8-4103-BB8E-F442DB939C17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1C0A9B93-E8C1-450E-90F5-23695E426E91}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "mailer", "src\mailer\mailer.xproj", "{039C35C0-F5B9-41E0-89CB-37F1B0EBDD7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{039C35C0-F5B9-41E0-89CB-37F1B0EBDD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{039C35C0-F5B9-41E0-89CB-37F1B0EBDD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{039C35C0-F5B9-41E0-89CB-37F1B0EBDD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{039C35C0-F5B9-41E0-89CB-37F1B0EBDD7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{039C35C0-F5B9-41E0-89CB-37F1B0EBDD7C} = {6B59DEEA-14C8-4103-BB8E-F442DB939C17}
+	EndGlobalSection
+EndGlobal
