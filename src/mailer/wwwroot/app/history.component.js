@@ -26,3 +26,4 @@ var HistoryComponent = (function () {
     return HistoryComponent;
 }());
 exports.HistoryComponent = HistoryComponent;
+//# sourceMappingURL=history.component.js.map

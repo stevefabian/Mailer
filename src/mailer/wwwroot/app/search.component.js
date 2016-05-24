@@ -26,3 +26,4 @@ var SearchComponent = (function () {
     return SearchComponent;
 }());
 exports.SearchComponent = SearchComponent;
+//# sourceMappingURL=search.component.js.map
