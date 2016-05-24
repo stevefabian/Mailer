@@ -9,19 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('angular2/core');
-var history_component_1 = require('./history.component');
-var search_component_1 = require('./search.component');
-var AppComponent = (function () {
-    function AppComponent() {
+var SearchComponent = (function () {
+    function SearchComponent() {
+        this.searchText = "";
     }
-    AppComponent = __decorate([
+    SearchComponent.prototype.doSearch = function () {
+        alert("Searching for " + this.searchText + " ...");
+    };
+    SearchComponent = __decorate([
         core_1.Component({
-            selector: "my-app",
-            templateUrl: '/app/templates/app.template.html',
-            directives: [history_component_1.HistoryComponent, search_component_1.SearchComponent]
+            selector: 'my-search',
+            templateUrl: '/app/templates/search.template.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], SearchComponent);
+    return SearchComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.SearchComponent = SearchComponent;

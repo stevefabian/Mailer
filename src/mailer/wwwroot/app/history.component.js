@@ -9,17 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('angular2/core');
-var WelcomeComponent = (function () {
-    function WelcomeComponent() {
-        this.welcomeMessage = "about this application";
+var HistoryComponent = (function () {
+    function HistoryComponent() {
+        this.Items = [
+            { Id: 1, Date: new Date('5/14/16'), Subject: "This is a test", GroupId: 1, Recipients: 2 },
+            { Id: 1, Date: new Date('5/16/16'), Subject: "My First Message and it has a very long subject line", GroupId: 1, Recipients: 3 }
+        ];
     }
-    WelcomeComponent = __decorate([
+    HistoryComponent = __decorate([
         core_1.Component({
-            selector: 'welcome',
-            templateUrl: '/app/welcome/welcome.template.html'
+            selector: 'message-history',
+            templateUrl: '/app/templates/history.template.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], WelcomeComponent);
-    return WelcomeComponent;
+    ], HistoryComponent);
+    return HistoryComponent;
 }());
-exports.WelcomeComponent = WelcomeComponent;
+exports.HistoryComponent = HistoryComponent;

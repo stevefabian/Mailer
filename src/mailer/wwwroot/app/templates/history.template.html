@@ -1,0 +1,22 @@
+﻿<h3 class="well">Message History</h3>
+    
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Date</th>
+                <th>Subject</th>
+                <th class="hidden-xs" style="text-align: center;">Group</th>
+                <th class="hidden-xs hidden-sm" style="text-align: center;">Sent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of Items">
+                <td style="width: 30px;"><input type="checkbox" value="" /></td>
+                <td style="width: 85px;">{{item.Date | date:'shortDate'}}</td>
+                <td>{{item.Subject}}</td>
+                <td class="hidden-xs" style="width: 85px; text-align: center;">{{item.GroupId}}</td>
+                <td class="hidden-xs hidden-sm" style="width: 85px; text-align: center;">{{item.Recipients}}</td>
+            </tr>
+        </tbody>
+    </table>

@@ -47,7 +47,10 @@ gulp.task("bundle", function () {
     gulp.src(paths.npm + "rxjs/bundles/*.*", { base: paths.npm + "rxjs/bundles/" })
         .pipe(gulp.dest(paths.lib + "exjs/"));
 
-    gulp.src(paths.npm + "bootstrap/dist/js/*.*", { base: paths.npm + "bootstrap/dist/js" })
+    gulp.src(paths.npm + "jquery/dist/*.*", { base: paths.npm + "jquery/dist/" })
+        .pipe(gulp.dest(paths.lib + "jquery/"));
+
+    gulp.src(paths.npm + "bootstrap/dist/js/*.*", { base: paths.npm + "bootstrap/dist/js/" })
         .pipe(gulp.dest(paths.lib + "bootstrap/"));
 
     gulp.src(paths.npm + "bootstrap/dist/css/bootstrap.min.css")
