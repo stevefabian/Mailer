@@ -9,20 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('angular2/core');
-var SearchComponent = (function () {
-    function SearchComponent() {
-        this.searchText = "";
+var http_1 = require('angular2/http');
+require('rxjs/Rx');
+require('rxjs/add/operator/map');
+var MessageService = (function () {
+    function MessageService(_http) {
+        this._http = _http;
+        this._messageServiceUrl = '/api/emails';
     }
-    SearchComponent.prototype.doSearch = function () {
-        alert("Searching for " + this.searchText + " ...");
+    MessageService.prototype.getMessages = function () {
+        var data = this._http.get(this._messageServiceUrl)
+            .map(function (res) { return res.json(); });
+        return data;
     };
-    SearchComponent = __decorate([
-        core_1.Component({
-            selector: 'my-search',
-            templateUrl: '/app/templates/search.template.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], SearchComponent);
-    return SearchComponent;
+    MessageService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], MessageService);
+    return MessageService;
 }());
-exports.SearchComponent = SearchComponent;
+exports.MessageService = MessageService;

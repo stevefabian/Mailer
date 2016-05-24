@@ -1,11 +1,25 @@
-import { Component } from 'angular2/core';
+import { Component, OnInit } from 'angular2/core';
 import { Message } from './message.model';
+import { MessageService } from './message.service';
+import { HTTP_PROVIDERS } from 'angular2/http';
 
 @Component({
     selector: 'message-history',
-    templateUrl: '/app/templates/history.template.html'
+    templateUrl: '/app/templates/history.template.html',
+    providers: [MessageService, HTTP_PROVIDERS]
 })
-export class HistoryComponent {
+export class HistoryComponent implements OnInit {
+
+    constructor(private _messageService: MessageService) { }
+
+    ngOnInit() {
+
+        this._messageService.getMessages()
+            .subscribe(res => this.Items = res,
+            error => console.error(error)
+            );
+
+    }
 
     public Items: Message[] = [
         { Id: 1, Date: new Date('5/14/16'), Subject:"This is a test", GroupId: 1, Recipients:2 },
