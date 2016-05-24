@@ -2,10 +2,11 @@
 var Message = (function () {
     function Message() {
         this.Id = -1;
-        this.Date = new Date();
+        this.Sent = false;
         this.Subject = "";
-        this.GroupId = -1;
-        this.Recipients = -1;
+        this.Body = "";
+        this.DateSent = new Date();
+        this.History = [];
     }
     return Message;
 }());

@@ -1,7 +1,14 @@
 export class Message {
+
     public Id: number = -1;
-    public Date: Date = new Date();
+
+    public Sent: boolean = false;
+
     public Subject: string = "";
-    public GroupId: number = -1;
-    public Recipients: number = -1;
+
+    public Body: string = "";
+
+    public DateSent: Date = new Date();
+
+    public History: string[] = [];
 }

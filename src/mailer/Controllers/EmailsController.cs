@@ -12,9 +12,9 @@ namespace mailer.Controllers
     {
         private static readonly List<Message> Messages= new List<Message>
         {
-            new Message { Id=1, Subject="Test Message 1" },
-            new Message { Id=2, Subject="Test Message 2" },
-            new Message { Id=3, Subject="Test Message 3" }
+            new Message { Id=1, Subject="This is my very first message", DateSent=new DateTime(2016,5,16,9,26,00).ToUniversalTime(), Sent=true },
+            new Message { Id=2, Subject="Another Test Message", DateSent=new DateTime(2016,5,14,11,15,08).ToUniversalTime() },
+            new Message { Id=3, Subject="Testing Message History in a Grid", DateSent=new DateTime(2016,4,28,15,2,12).ToUniversalTime() }
         };
 
         // GET api/values
